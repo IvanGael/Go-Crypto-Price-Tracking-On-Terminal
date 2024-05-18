@@ -38,7 +38,7 @@ Type from commandline
 gohowmuch --symbol=doge
 ```
 
-Support *--symbol* and *--symbolbase*. Change the symbol that avaiable on [https://www.binance.com/en/markets](binance)
+Support *--symbol* and *--symbolbase*.
 
 *--symbol* default value is "btc".
 
