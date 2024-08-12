@@ -26,6 +26,8 @@ func main() {
 	width := 600
 	graphSize := width - graphCutSize
 	dataGraph := make([]float64, 0, graphSize)
+	redColor := "red"
+	greenColor := "green"
 	price := float64(0)
 	priceUp := true
 	graph := ""
@@ -61,9 +63,9 @@ func main() {
 				dataGraph = appendGraph(graphSize, dataGraph, datum)
 				graph = asciigraph.Plot(dataGraph, asciigraph.Precision(5), asciigraph.Height(5))
 				app.QueueUpdateDraw(func() {
-					colorText := "red"
+					colorText := redColor
 					if priceUp {
-						colorText = "green"
+						colorText = greenColor
 					}
 					textView.SetText(p.Sprintf("   %s: [%s]%f[default]\n\n%v", symbolText, colorText, price, graph))
 				})
